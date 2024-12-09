@@ -60,8 +60,14 @@ export const TextDiv = styled.div`
 
 export const SearchIcon = styled.div`
     padding-right: 1.5rem;
-    i {
+
+    span {
+        font-size: .8rem;
         color: white;
+    }
+
+    i {
+        color: #00d200;
         font-size: 1.5rem;
         transition: transform 0.3s ease;
 

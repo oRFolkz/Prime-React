@@ -26,7 +26,7 @@ export const ScrollDiv = styled.div`
 
         @media ( width < 720px ) {
             font-size: 1rem;
-            margin: 0;
+            margin: 0 .5rem 0 0;
         }
     }
 
@@ -41,6 +41,7 @@ export const ScrollDiv = styled.div`
         padding-left: .2rem;
         width: 12rem;
         transition: all .5s ease;
+        border: 1px solid gray;
     
         &.hidden {
             left: -200px !important;

@@ -12,7 +12,7 @@ function NavBar() {
                 <p>Rua 04, N°709</p>
             </TextDiv>
             <SearchIcon>
-                <i className="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-cart-shopping"><span>5</span></i>
             </SearchIcon>
         </NavBarDiv>
     )
