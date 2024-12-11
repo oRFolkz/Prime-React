@@ -13,11 +13,12 @@ export const NavBarDiv = styled.div`
     justify-content: space-between;
 `
 
-export const Bars = styled.div`
+export const WppIcon = styled.div`
     padding-left: 1.5rem;
+
     i {
-        color: white;
-        font-size: 1.5rem;
+        color: #25d366;
+        font-size: 2rem;
         transition: transform 0.3s ease;
 
         &:hover{
@@ -58,7 +59,7 @@ export const TextDiv = styled.div`
     }
 `
 
-export const SearchIcon = styled.div`
+export const CartIcon = styled.div`
     padding-right: 1.5rem;
 
     span {
@@ -67,7 +68,7 @@ export const SearchIcon = styled.div`
     }
 
     i {
-        color: #00d200;
+        color: #25d366;
         font-size: 1.5rem;
         transition: transform 0.3s ease;
 

@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
 `
 
 export const ScrollDiv = styled.div`
-    z-index: 100;
+    z-index: 50;
     width: 20rem;
     position: absolute;
     height: 100%;
@@ -61,14 +61,13 @@ export const ScrollMobile = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 98.4%;
-        max-width: 581px;
+        width: 100%;
         background-color: rgb(0,0,0,.5);
         height: 100%;
             
         &.hidden {
-            top: .5rem;
-            left: .5rem;
+            top: 1.5rem;
+            left: .3rem;
             width: auto;
             height: auto;
             background-color: transparent;
@@ -83,7 +82,6 @@ export const ScrollMobile = styled.div`
         }
 
         &.show {
-            left: .5rem !important;
         }
     }
 `
@@ -103,10 +101,6 @@ export const SelectedMenuBG = styled.div`
     }
 
     @media ( width < 720px) {
-        padding-left: 13rem;
-    }
-
-    @media ( width < 590px) {
         padding-left: 2rem;
     }
 `

@@ -128,9 +128,9 @@ function Menu() {
                 className={tagCervejasActive ? 'active' : ''}>CERVEJAS</p>
             </ScrollDiv>
             <ScrollMobile 
-            onClick={() => setHidden(false)}
-            className={hidden ? 'hidden' : 'show'}>
-            <i className={hidden ? 'show fa-solid fa-arrow-right' : 'hidden'}></i>
+            onClick={() => setHidden(!hidden)}
+            className={hidden ? 'hidden' : ''}>
+            <i className={hidden ? 'fa-solid fa-arrow-right' : 'hidden'}></i>
             </ScrollMobile>
              <SelectedMenuBG>
                 <SelectedMenu>

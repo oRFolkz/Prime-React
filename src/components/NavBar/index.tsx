@@ -1,19 +1,19 @@
 import React from "react"
-import { Bars, NavBarDiv, SearchIcon, TextDiv } from "./style.ts"
+import { CartIcon, NavBarDiv, WppIcon, TextDiv } from "./style.ts"
 
 function NavBar() {
     return (
         <NavBarDiv>
-            <Bars>
-                <i className="fa-solid fa-bars"></i>
-            </Bars>
+            <WppIcon>
+                <i className="fa-brands fa-whatsapp"></i>
+            </WppIcon>
             <TextDiv>
                 <p>Endereço de retidada</p>
                 <p>Rua 04, N°709</p>
             </TextDiv>
-            <SearchIcon>
+            <CartIcon>
                 <i className="fa-solid fa-cart-shopping"><span>5</span></i>
-            </SearchIcon>
+            </CartIcon>
         </NavBarDiv>
     )
 }
