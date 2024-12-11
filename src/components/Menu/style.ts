@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
 `
 
 export const ScrollDiv = styled.div`
+    z-index: 100;
     width: 20rem;
     position: absolute;
     height: 100%;
@@ -34,6 +35,7 @@ export const ScrollDiv = styled.div`
         border-radius: 0.5rem;
         background-color: #505050;
         color: white;
+
     }
 
     @media ( width < 720px ) {
@@ -54,24 +56,30 @@ export const ScrollDiv = styled.div`
 `
 
 export const ScrollMobile = styled.div`
-    display: none;
-
     @media ( width < 720px) {
-        display: block;
+        z-index: 1;
         position: absolute;
-        top: 1.5rem;
-        background-color:  #505050;
-        color: white;
-        padding: .5rem;
-        border-radius: 10px;   
-        transition: all .5s ease;
-
-        i {
-            font-size: 1.5rem;
-        }
+        top: 0;
+        left: 0;
+        width: 98.4%;
+        max-width: 581px;
+        background-color: rgb(0,0,0,.5);
+        height: 100%;
             
         &.hidden {
-            left: -300px !important;
+            top: .5rem;
+            left: .5rem;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            color: white;
+
+            i {
+                border-radius: 10px;  
+                padding: .5rem;
+                background-color:  #505050;
+                font-size: 1.5rem;
+            }
         }
 
         &.show {
@@ -95,6 +103,10 @@ export const SelectedMenuBG = styled.div`
     }
 
     @media ( width < 720px) {
+        padding-left: 13rem;
+    }
+
+    @media ( width < 590px) {
         padding-left: 2rem;
     }
 `

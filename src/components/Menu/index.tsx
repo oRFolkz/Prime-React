@@ -129,8 +129,8 @@ function Menu() {
             </ScrollDiv>
             <ScrollMobile 
             onClick={() => setHidden(false)}
-            className={hidden ? 'show' : 'hidden'}>
-            <i className="fa-solid fa-arrow-right"></i>
+            className={hidden ? 'hidden' : 'show'}>
+            <i className={hidden ? 'show fa-solid fa-arrow-right' : 'hidden'}></i>
             </ScrollMobile>
              <SelectedMenuBG>
                 <SelectedMenu>
