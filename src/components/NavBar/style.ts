@@ -21,9 +21,13 @@ export const WppIcon = styled.div`
         font-size: 2rem;
         transition: transform 0.3s ease;
 
-        &:hover{
+        &:hover {
             transform: scale(1.3);
             cursor: pointer;
+        }
+    
+        @media ( width < 720px ) {
+            transform: scale(1.2);
         }
     }
 `
@@ -75,6 +79,10 @@ export const CartIcon = styled.div`
         &:hover{
             transform: scale(1.3);
             cursor: pointer;
+        }
+
+        @media ( width < 720px ) {
+            transform: scale(1.2);
         }
     }
 `

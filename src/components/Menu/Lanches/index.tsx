@@ -5,7 +5,7 @@ import baconpiry from '../../../Imgs/Lanches/77.jpg'
 
 const Lanches = ({ tagLanchesActive }) => {
 
-    const [acreHidden, setAcreHidden] = useState(false)
+    const [acreHidden, setAcreHidden] = useState(true)
     const [adicionalPicles, setAdicionalPicles] = useState(0)
     const [adicionalTomate, setAdicionalTomate] = useState(0)
     const [adicionalCebola, setAdicionalCebola] = useState(0)
