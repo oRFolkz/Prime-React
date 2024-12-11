@@ -4,8 +4,8 @@ export const BannerDiv = styled.div`
     background-color: black;
     height: 20rem;
     width: 100%;
-    position: relative;
     margin-top: 6rem;
+    position: relative;
     
     .backgroundImg {
         max-height: 20rem;

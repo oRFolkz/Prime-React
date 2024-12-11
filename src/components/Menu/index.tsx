@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { MainContainer, ScrollDiv, SelectedMenuBG, SelectedMenu, ScrollMobile } from "./style.ts"
+import { MainContainer, ScrollDiv, SelectedMenuBG, SelectedMenu, ScrollMobile, ScrollTags, OpacityBackground } from "./style.ts"
 
 import Lanches from "./Lanches/index.tsx"
 import Molhos from "./Molhos/index.tsx"
@@ -83,56 +83,62 @@ function Menu() {
 
     return (
         <MainContainer>
-            <ScrollDiv className={hidden ? 'hidden' : 'show'}>
-                <p 
-                onClick={() => {
-                    toggleMenu(0)
-                    setHidden(true)}
-                }
-                className={tagLanchesActive ? 'active' : ''}>LANCHES</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(1)
-                    setHidden(true)}
-                }
-                className={tagMolhosActive ? 'active' : ''}>MOLHOS</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(2)
-                    setHidden(true)}
-                }
-                className={tagPorcoesActive ? 'active' : ''}>PORÇÕES</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(3)
-                    setHidden(true)}
-                }
-                className={tagDocesActive ? 'active' : ''}>DOCES E SOBREMESAS</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(4)
-                    setHidden(true)}
-                }
-                className={tagRefigerantesActive ? 'active' : ''}>REFRIGERANTES</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(5)
-                    setHidden(true)}
-                }
-                className={tagSucosActive ? 'active' : ''}>SUCOS</p>
-                <p            
-                onClick={() => {
-                    toggleMenu(6)
-                    setHidden(true)}
-                }
-                className={tagCervejasActive ? 'active' : ''}>CERVEJAS</p>
+            <ScrollDiv >
+                <OpacityBackground 
+                className={hidden ? '' : 'showBackground'}
+                onClick={() => setHidden(!hidden)}
+                />
+                <ScrollTags className={hidden ? 'hidden' : 'show'}>
+                    <p 
+                    onClick={() => {
+                        toggleMenu(0)
+                        setHidden(true)}
+                    }
+                    className={tagLanchesActive ? 'active' : ''}>LANCHES</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(1)
+                        setHidden(true)}
+                    }
+                    className={tagMolhosActive ? 'active' : ''}>MOLHOS</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(2)
+                        setHidden(true)}
+                    }
+                    className={tagPorcoesActive ? 'active' : ''}>PORÇÕES</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(3)
+                        setHidden(true)}
+                    }
+                    className={tagDocesActive ? 'active' : ''}>DOCES E SOBREMESAS</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(4)
+                        setHidden(true)}
+                    }
+                    className={tagRefigerantesActive ? 'active' : ''}>REFRIGERANTES</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(5)
+                        setHidden(true)}
+                    }
+                    className={tagSucosActive ? 'active' : ''}>SUCOS</p>
+                    <p            
+                    onClick={() => {
+                        toggleMenu(6)
+                        setHidden(true)}
+                    }
+                    className={tagCervejasActive ? 'active' : ''}>CERVEJAS</p>
+                </ScrollTags>
+                <ScrollMobile 
+                onClick={() => setHidden(!hidden)}
+                className={hidden ? '' : 'hidden'}>
+                <i className={hidden ? 'fa-solid fa-arrow-right' : ''}></i>
+                </ScrollMobile>
             </ScrollDiv>
-            <ScrollMobile 
-            onClick={() => setHidden(!hidden)}
-            className={hidden ? 'hidden' : ''}>
-            <i className={hidden ? 'fa-solid fa-arrow-right' : 'hidden'}></i>
-            </ScrollMobile>
-             <SelectedMenuBG>
+            <SelectedMenuBG>
                 <SelectedMenu>
                     <Lanches tagLanchesActive={tagLanchesActive}/>
                     <Molhos tagMolhosActive={tagMolhosActive}/>

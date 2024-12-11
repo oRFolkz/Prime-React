@@ -9,10 +9,10 @@ function NavBar() {
             </WppIcon>
             <TextDiv>
                 <p>Endereço de retidada</p>
-                <p>Rua 04, N°709</p>
+                <p>Rua 04, N°709 - Orlândia</p>
             </TextDiv>
             <CartIcon>
-                <i className="fa-solid fa-cart-shopping"><span>5</span></i>
+                <i className="fa-solid fa-cart-shopping"><span>0</span></i>
             </CartIcon>
         </NavBarDiv>
     )
