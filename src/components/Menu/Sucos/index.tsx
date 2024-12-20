@@ -17,7 +17,7 @@ const Sucos = ({ tagSucosActive }) => {
           id: 1,
           imgSrc: Fruitz900ML,
           name: "SUCO DE LARANJA INTEGRAL FRUITZ 900ML",
-          description: "*ADOÇADO*",
+          description: "*adoçado*",
           price: 13.00,
         },
         {
@@ -35,12 +35,28 @@ const Sucos = ({ tagSucosActive }) => {
           price: 15.00,
         },
         {
-            id: 4,
-            imgSrc: Polpa500ML,
-            name: "SUCO DE POLPA 500ML",
-            description: "",
-            price: 10.00,
-          }
+          id: 4,
+          imgSrc: Polpa500ML,
+          name: "SUCO DE POLPA 500ML",
+          description: "",
+          price: 10.00,
+        }
+        ,
+        {
+          id: 5,
+          imgSrc: Fruitz900ML,
+          name: "SUCO DE LARANJA INTEGRAL FRUITZ 900ML",
+          description: "*adoçado*",
+          price: 13.00,
+        }
+        ,
+        {
+          id: 6,
+          imgSrc: Prats900ML,
+          name: "SUCO DE LARANJA INTEGRAL PRATS 900ML",
+          description: "",
+          price: 15.00,
+        }
     ];
 
     return (

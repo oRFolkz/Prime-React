@@ -20,7 +20,7 @@ const Cart = () => {
             <CartBackground onClick={() => setOpenCart(!openCart) }/>
             <CartDiv>
               <ValorFinal>
-                TOTAL : R$ {(finalPrice).toFixed(2)}
+                {finalPrice < 0 ? 'Carrinho vazio' : `TOTAL: R$ ${(finalPrice).toFixed(2)}`}
               </ValorFinal>
               {cartItems.map((cartItem) => (
                 <>

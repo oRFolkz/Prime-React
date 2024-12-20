@@ -188,10 +188,10 @@ const Lanches = ({ tagLanchesActive }) => {
             key={item.id} 
             className={item.mostrarAdicionais ? 'hideBorder active' : ''}
             onClick={() => {toggleMostrarAdicionais(item.id)}}>
-              <ImgDiv>
+              <ImgDiv className={`lanches ${item.mostrarAdicionais ? 'active' : ''}`}>
                 <img src={item.imgSrc} alt="Imagem do Lanche" />
               </ImgDiv>
-              <TxtDiv>
+              <TxtDiv className={`lanches ${item.mostrarAdicionais ? 'active' : ''}`}>
                 <ItemName>{item.name}</ItemName>
                 <Description>{item.description}</Description>
                 <Adicionais className={item.mostrarAdicionais ? "" : "backGroundColor"}>
@@ -203,7 +203,9 @@ const Lanches = ({ tagLanchesActive }) => {
             </MenuItem>
             {item.mostrarAdicionais && 
             item.adicionais.map((itemsAdicionais) => (
-            <AcrecimosDiv key={itemsAdicionais.adicionalID}>
+            <AcrecimosDiv 
+            key={itemsAdicionais.adicionalID}
+            className={item.mostrarAdicionais ? 'active' : ''}>
               <AcreTxtDiv>
                 <AcreTxt>
                   {itemsAdicionais.adicionalNome} 

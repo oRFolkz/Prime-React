@@ -72,7 +72,7 @@ const Molhos = ({ tagMolhosActive }) => {
       {tagMolhosActive &&
         listaMolhos.map((item) => (
           <MenuItem key={item.id}>
-            <ImgDiv>
+            <ImgDiv >
               <img src={item.imgSrc} alt="" />
             </ImgDiv>
             <TxtDiv>

@@ -7,6 +7,7 @@ export const CartBackground = styled.div`
     width: 100vw;
     height: 100%;
     background-color: rgb(0,0,0,0.8);
+    cursor: pointer;
 `
 
 export const CartDiv = styled.div`
@@ -14,31 +15,48 @@ export const CartDiv = styled.div`
     position: fixed;
     top: 96px;
     bottom: 0;
-    height: 420px;
+    height: 500px;
     width: 100%;
     background-color: gray;
     border-radius: 0 0 1rem 1rem;
-    overflow: hidden;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const ValorFinal = styled.div`
     background-color: green;
-    width: 60%;
+    width: 40%;
     margin: .4rem auto 0 auto;
     border-radius: 1rem;
     padding: .8rem .5rem;
     text-align: center;
     color: white;
     font-weight: bold;
+
+    @media ( width < 820px ) {
+        width: 60%;
+    }
 `
 
 export const CartCard = styled.div`
-    width: 80%;
+    width: 50%;
     padding: 1rem;
     border-radius: 1rem;
-    margin: .5rem auto 0 auto;
+    margin: .5rem auto .5rem auto;
     display: flex;
     background-color: white;
+
+    @media ( width < 780px ) {
+        width: 80%;
+    }
+
+    @media ( width < 350px ) {
+        width: 88%;
+    }
 `
 
 export const CartImg = styled.div`

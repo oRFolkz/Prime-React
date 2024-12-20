@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const MenuItem = styled.div`
-    width: 25rem;
     height: 10rem;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 0 1rem;
     cursor: pointer;
@@ -12,7 +11,12 @@ export const MenuItem = styled.div`
     border-bottom: 1px solid black;
 
     &.active {
-        display: block;
+    @media ( width < 840px ) {
+        display: block
+    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: auto;
         width: 90%;
         margin: .4rem auto;
@@ -20,40 +24,49 @@ export const MenuItem = styled.div`
 
         img {
             width: 100%;
-            height: 200px;
-        } 
+            height: auto;
+        }
     }
 
     &.hideBorder {
         border-bottom: 1px solid transparent;
     }
-
-    @media ( width > 720px) {
-         &:hover {
-            background-color: #d7d7d7;
-    }
-
-    @media ( width < 1230px) {
-        width: 45%;
-    }
-
-    @media ( width < 1060px) {
-        width: 100%;
-    }
 `
 
 export const ImgDiv = styled.div`
+    width: 35%;
+
     img {
         width: 100px;
         height: 100px;
         object-fit: cover;
         border-radius: .5rem;
-    }   
+    }
+
+    &.lanches {
+        width: auto;
+    }
+
+    &.active {
+        width: 60%;
+        @media ( width < 840px ) {
+            width: 100%;
+        }
+    }
 `
 
 export const TxtDiv = styled.div`
-    @media ( width < 1060px) {
-        width: 80%;
+    width: 65%;
+
+    &.lanches {
+        width: auto;
+    }
+
+    &.active {
+        width: 70%;
+        @media ( width < 840px ) {
+            width: 100%;
+        }
     }
 `
 
@@ -64,7 +77,7 @@ export const ItemName = styled.div`
     font-weight: bold;
     padding: 0 0 0 1rem;
 
-    @media ( width < 420px) {
+    @media ( width > 420px) {
         font-size: .8rem;
     }
 `
@@ -107,19 +120,21 @@ export const PriceDiv = styled.div`
 
 export const Price = styled.p`
     margin: .6rem auto;
-    width: 70%;
-    padding: .2rem 0;
+    width: 80%;
+    padding: .5rem 0;
     border-radius: 10px;
     text-align: center;
     background-color: green;
     color: white;
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
 
     @media ( width < 425px) {
         font-size: .9rem;
-        width: 80%;
-        padding: .5rem 0;
+    }
+    @media ( width > 840px) {
+            width: 60%;
     }
 `
 
@@ -130,6 +145,12 @@ export const AcrecimosDiv = styled.div`
 
     &.hidden {
         display: none;
+    }
+    
+    &.active {
+        @media ( width > 840px ) {
+            margin: auto;
+            width: 70%;
     }
 `
 
@@ -157,6 +178,7 @@ export const AcreTxtIcon = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     .fa-plus {
         color: white;

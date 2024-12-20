@@ -60,6 +60,9 @@ export const TextDiv = styled.div`
             font-size: 1rem;
             padding: 0rem .5rem;
         }
+        @media (width < 335px ) {
+            font-size: .9rem;
+        }
     }
 `
 

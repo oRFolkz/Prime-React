@@ -6,16 +6,16 @@ export const MainContainer = styled.div`
 `
 
 export const OpacityBackground = styled.div`
-
-    &.showBackground{
+    @media ( width < 720px) {
+        &.showBackground{
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         background-color: rgb(0,0,0,0.5);
+        }
     }
-
 `
 export const ScrollDiv = styled.div`
     position: sticky;
@@ -29,7 +29,7 @@ export const ScrollTags = styled.div `
     top: 0;
     left: 0;
     z-index: 50;
-    width: 12rem;
+    width: 17rem;
     height: 100vh;
     border-radius: 0 0 1rem 0;
     background-color: white;
@@ -58,7 +58,10 @@ export const ScrollTags = styled.div `
 
     @media ( width < 720px ) {
         &.hidden {
-            left: -20rem;
+            left: -40rem;
+        }
+    @media ( width < 720px ) {
+        width: 14rem;
         }
     }
 `
@@ -96,7 +99,7 @@ export const SelectedMenuBG = styled.div`
 
     @media ( width < 1570px) {
         justify-content: start;
-        padding-left: 22rem;
+        padding-left: 18rem;
     }
 
     @media ( width < 1230px) {
@@ -106,6 +109,10 @@ export const SelectedMenuBG = styled.div`
     @media ( width < 720px) {
         padding-left: 2rem;
     }
+
+    @media ( width < 350px) {
+        padding-left: 1rem;
+    }
 `
 
 export const SelectedMenu = styled.div`
@@ -114,11 +121,11 @@ export const SelectedMenu = styled.div`
     border-bottom: 3px solid black;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-content: flex-start;
-    flex-wrap: wrap;
-    max-width: 54rem;
+    max-width: 55rem;
 
-    @media ( width < 1230px) {
-        width: 100%;
+    @media ( width < 350px) {
+        max-width: 18rem;
     }
 `
